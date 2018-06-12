@@ -1,0 +1,31 @@
+.forfaits{
+  display: block;
+  max-width: 1024px;
+  margin: 0 auto;
+  article{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+
+    img{
+      width: 200px;
+    }
+
+    h2{
+      width: 200px;
+      a{
+      font-family: 'Crimson Text', serif;
+      color: #c35c5f;
+      font-weight: 400;
+      font-size: 25px;
+      text-decoration: none;
+      }
+    }
+    .date{
+      display: none;
+    }
+    .author{
+      display: none;
+    }
+  }
+}

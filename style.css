@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 /* Slider */
 /* line 37, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-loading .slick-list {
@@ -93,7 +95,7 @@
 }
 
 /* Dots */
-/* line 123, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+/* line 122, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
@@ -101,129 +103,738 @@
 /* line 127, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dots {
   position: absolute;
-  bottom: -25px;
-  list-style: none;
+  bottom: 110px;
   display: block;
-  text-align: center;
+  width: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
+  padding-right: 30px;
+  list-style: none;
+  text-align: right;
 }
 
-/* line 136, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+/* line 143, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  width: 15px;
+  height: 15px;
   margin: 0 5px;
   padding: 0;
   cursor: pointer;
 }
 
-/* line 144, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+/* line 156, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dots li button {
-  border: 0;
-  background: transparent;
+  font-size: 0;
+  line-height: 0;
   display: block;
-  height: 20px;
   width: 20px;
-  outline: none;
-  line-height: 0px;
-  font-size: 0px;
-  color: transparent;
+  height: 20px;
   padding: 5px;
   cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
 }
 
-/* line 156, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
-.slick-dots li button:hover, .slick-dots li button:focus {
+/* line 174, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+.slick-dots li button:hover,
+.slick-dots li button:focus {
   outline: none;
 }
 
-/* line 158, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+/* line 179, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
   opacity: 1;
 }
 
-/* line 162, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+/* line 184, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 40px;
+  line-height: 20px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
+  width: 40px;
   height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
+  content: '□';
   text-align: center;
-  color: black;
-  opacity: 0.25;
+  color: #c35c5f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 178, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
+/* line 205, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_slick-theme.scss */
 .slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
+  content: '■';
+  color: #c35c5f;
 }
 
 /* line 1, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
 .header {
+  display: none;
+}
+
+/* line 4, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#responsive-menu-button {
+  display: block;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 9, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  #responsive-menu-button {
+    display: none;
+  }
+  /* line 12, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header {
+    display: block;
+    width: 1024px;
+    height: 160px;
+    line-height: 120px;
+    background: white;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+  }
+  /* line 24, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header .logo {
+    display: inline-block;
+    padding-top: 30px;
+    margin-right: 50px;
+    box-sizing: border-box;
+  }
+  /* line 34, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header nav.nav {
+    vertical-align: top;
+    display: inline-block;
+  }
+  /* line 39, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header nav.nav li {
+    display: inline-block;
+    margin-right: 94px;
+  }
+  /* line 42, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header nav.nav li #menu-item-22 {
+    margin-right: 0px !important;
+  }
+  /* line 45, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header nav.nav li a {
+    text-decoration: none;
+    color: #c35c5f;
+  }
+  /* line 56, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  .header .menu .active > a {
+    border-bottom: 3px solid #c35c5f;
+    padding-bottom: 10px;
+  }
+}
+
+/* line 1, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home {
   display: block;
   width: 1024px;
-  height: 160px;
-  line-height: 120px;
-  background: white;
-  text-align: center;
   margin: 0 auto;
-  overflow: hidden;
-  box-sizing: border-box;
+  margin-bottom: -100px;
+}
+
+/* line 7, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home .actu img {
+  display: inline-block;
+  width: 770px !important;
+  height: 400px;
+}
+
+/* line 11, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home .actu h2 {
+  padding-top: 60px;
+  display: inline-block;
   font-family: 'Crimson Text', serif;
-  font-size: 20px;
-}
-
-/* line 13, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header .logo {
-  display: inline-block;
-  padding-top: 30px;
-  margin-right: 50px;
-  box-sizing: border-box;
-}
-
-/* line 23, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header nav.nav {
+  color: #c35c5f;
+  height: 400px;
+  width: 250px;
   vertical-align: top;
-  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: right;
+  font-size: 30px;
 }
 
-/* line 28, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header nav.nav li {
-  display: inline-block;
-  margin-right: 94px;
+/* line 24, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home .actu h2 span {
+  font-weight: 700 !important;
+  font-size: 40px;
+  line-height: 48px;
 }
 
-/* line 31, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header nav.nav li #menu-item-22 {
+/* line 34, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home .slick-prev {
+  content: "";
+  left: 624px;
+  top: 364px;
+  width: 73px;
+  height: 73px;
+  display: block;
+  background: url("img/arrow_right.png") no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
+
+/* line 45, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.slider-home .slick-next {
+  content: "";
+  width: 73px;
+  height: 73px;
+  display: block;
+  background: url("img/arrow_left.png") no-repeat;
+  background-size: contain;
+  right: 254px;
+  top: 363.5px;
+}
+
+/* line 58, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.reservation {
+  text-align: center;
+  margin-top: -65px;
+}
+
+/* line 63, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.reservation div {
+  position: relative !important;
+  display: inline-block !important;
+  width: 150px;
+  border: none;
+  border-bottom: 3px solid #c35c5f;
+  padding-bottom: 10px;
+  margin-right: 30px;
+  text-align: left;
+}
+
+/* line 74, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.reservation .calendar_1 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 130px;
+}
+
+/* line 81, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.reservation .calendar_2 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 130px;
+}
+
+/* line 88, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.reservation button {
+  background: #c35c5f;
+  border: none;
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+/* line 97, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue {
+  background: #c35c5f;
+  min-height: 830px;
+  display: block;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* line 104, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue h2 {
+  color: #FFF;
+  font-family: 'Crimson Text', serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding-top: 80px;
+}
+
+/* line 111, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue hr {
+  border: none;
+  background: #FFF;
+  height: 1px;
+  width: 15%;
+  margin-top: -30px;
+  margin-bottom: 80px;
+}
+
+/* line 120, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article {
+  padding-top: 20px;
+  background: #FFF;
+  display: inline-block;
+  width: 250px;
+  height: 480px;
+  margin-right: 80px;
+  vertical-align: top;
+  text-align: right;
+}
+
+/* line 130, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article:last-child {
   margin-right: 0px !important;
 }
 
-/* line 34, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header nav.nav li a {
-  text-decoration: none;
+/* line 135, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article div {
+  width: 100%;
+  height: 160px;
+}
+
+/* line 139, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article h3 {
+  margin: 0 auto;
+  width: 90%;
+  font-family: 'Crimson Text', serif;
   color: #c35c5f;
-}
-
-/* line 45, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
-.header .menu .active > a {
+  font-size: 30px;
   border-bottom: 3px solid #c35c5f;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
 }
 
-/* line 2, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
-.slider-home img {
-  width: 770px;
+/* line 152, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article p {
+  padding: 7px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #486a6b;
+  text-align: left;
+}
+
+/* line 160, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue article a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #7f8981;
+  text-decoration: none;
+  text-align: right;
+  padding-right: 5px;
+}
+
+/* line 170, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.bienvenue a.ensavoirplus {
+  margin-left: 60%;
+  color: #FFF;
+  border-bottom: 3px solid #FFF;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+/* line 180, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites {
+  display: block;
+  text-align: right;
+  background: #edd7cc;
+  height: 500px !important;
+}
+
+/* line 186, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un {
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 0px;
+  width: 550px !important;
+  background: #edd7cc;
+  padding-top: 80px;
+}
+
+/* line 194, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile {
+  width: 70%;
+  padding: 0px;
+  height: 100px;
+  background: #FFF;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* line 202, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .img {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* line 207, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .img img {
+  width: 150px;
+  height: 80px;
+  display: inline-block;
+}
+
+/* line 214, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .text {
+  vertical-align: top;
+  display: inline-block;
+  width: 55%;
+  height: 40px;
+}
+
+/* line 220, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .text h2 {
+  margin-bottom: -30px;
+}
+
+/* line 225, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .text a {
+  vertical-align: top;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #8a9380;
+  font-family: 'Crimson Text', serif;
+  display: inline-block;
+  font-size: 10px;
+}
+
+/* line 234, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_un div.tuile .text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #486a6b;
+  text-align: left;
+  height: 20px;
+  display: block;
+  padding-left: 10px;
+}
+
+/* line 251, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux {
+  display: inline-block;
+  width: 45% !important;
+  height: 500px;
+}
+
+/* line 256, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu div {
+  display: inline-block;
+  width: 500px !important;
+  height: 500px !important;
+}
+
+/* line 261, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu div h2 {
+  color: #FFF;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 40px;
+  width: 100px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* line 273, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-dots {
+  position: absolute;
+  bottom: 160px;
+  left: 500px;
+  display: inline-block;
+  width: 0%;
+  padding: 0;
+  margin: 0;
+  padding-right: 30px;
+  list-style: none;
+  text-align: right;
+}
+
+/* line 291, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-dots li {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* line 298, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-dots li button:before {
+  color: #FFF;
+}
+
+/* line 302, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-dots li.slick-active button:before {
+  color: #FFF;
+}
+
+/* line 307, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-prev {
+  content: "";
+  left: 40px;
+  top: 464px;
+  width: 73px;
+  height: 73px;
+  display: block;
+  background: url("img/arrow_right.png") no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
+
+/* line 318, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.actualites .actu_deux .slider-actu .slick-next {
+  content: "";
+  width: 73px;
+  height: 73px;
+  display: block;
+  background: url("img/arrow_left.png") no-repeat;
+  background-size: contain;
+  right: 357px;
+  top: 464px;
+}
+
+/* line 334, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial h2 {
+  color: #c35c5f;
+  font-family: 'Crimson Text', serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding-top: 80px;
+  text-align: center;
+}
+
+/* line 342, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial hr {
+  border: none;
+  background: #c35c5f;
+  height: 1px;
+  width: 15%;
+  margin-top: -30px;
+  margin-bottom: 80px;
+}
+
+/* line 350, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial .tripvisor {
+  width: 40%;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+/* line 356, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial article {
+  display: inline-block;
+  width: 50%;
+}
+
+/* line 361, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial article article.avis {
+  display: block;
+  background: #cbcec7;
+  border-radius: 15px;
+  width: 90%;
+  height: 170px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+/* line 369, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial article article.avis div.photo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+/* line 377, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial article article.avis .testimonial_text {
+  margin-top: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  background: #e5e5db;
+  width: 70%;
+  font-size: 14px;
+  height: 120px;
+  margin-left: 30px;
+  text-align: left;
+  padding: 5px;
+}
+
+/* line 388, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_home.scss */
+.testimonial article article.avis .testimonial_text h2 {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #486a6b;
+  margin-top: -70px;
+  text-align: left;
+}
+
+/* line 1, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_chateau.scss */
+.chateau {
+  display: block;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 6, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_chateau.scss */
+.chateau img {
+  width: 100%;
+  position: relative;
+}
+
+/* line 11, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_chateau.scss */
+.chateau h2 {
+  text-align: left;
+  font-family: 'Crimson Text', serif;
+  color: #c35c5f;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/* line 19, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_chateau.scss */
+.chateau p {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+/* line 1, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait {
+  display: block;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 5, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait h2 {
+  font-family: 'Crimson Text', serif;
+  color: #FFF;
+  font-weight: 400;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+/* line 12, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait h3 {
+  font-family: 'Crimson Text', serif;
+  color: #8a9380;
+  font-weight: 400;
+}
+
+/* line 18, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait h4 {
+  font-family: 'Crimson Text', serif;
+  color: #cbcec7;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 65px;
+}
+
+/* line 25, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait p {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #7f8981;
+}
+
+/* line 32, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait #animated-thumbnials-103 {
+  background: none;
+}
+
+/* line 34, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait #animated-thumbnials-103 .thumbnail {
+  display: block;
+  padding: 5px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #c35c5f;
+  border-radius: 0px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+
+/* line 46, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div {
+  background: #c35c5f;
+  height: 320px;
+}
+
+/* line 49, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div article.image {
+  display: inline-block !important;
+  margin-right: 10px;
+  width: 45%;
+}
+
+/* line 55, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div article.un {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+}
+
+/* line 59, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div article.un h3 {
+  color: #FFF;
+}
+
+/* line 63, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div article.un h4 {
+  color: #FFF;
+}
+
+/* line 66, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfait.scss */
+.forfait div article.un p {
+  color: #FFF;
+}
+
+/* line 1, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits {
+  display: block;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 5, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article {
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+}
+
+/* line 10, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article img {
+  width: 200px;
+}
+
+/* line 14, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article h2 {
+  width: 200px;
+}
+
+/* line 16, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article h2 a {
+  font-family: 'Crimson Text', serif;
+  color: #c35c5f;
+  font-weight: 400;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* line 24, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article .date {
+  display: none;
+}
+
+/* line 27, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_forfaits.scss */
+.forfaits article .author {
+  display: none;
 }
 
 /*# sourceMappingURL=../style.map */
