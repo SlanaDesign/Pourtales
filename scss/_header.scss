@@ -1,0 +1,53 @@
+.header{
+  display: block;
+  width: 1024px;
+  height: 160px;
+  line-height: 120px;
+  background: white;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  .logo{
+    display: inline-block;
+    padding-top: 30px;
+    margin-right: 50px;
+    box-sizing: border-box;
+
+
+  }
+
+
+  nav.nav{
+
+    vertical-align: top;
+    display: inline-block;
+
+    li{
+      display: inline-block;
+      margin-right: 94px;
+    #menu-item-22{
+      margin-right: 0px!important;
+    }
+      a{
+        text-decoration: none;
+        color: #c35c5f;
+      }
+
+
+
+
+    }
+
+  }
+.menu .active > a {
+      border-bottom: 3px solid #c35c5f;
+      padding-bottom: 10px;
+
+
+
+
+  }
+}

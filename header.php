@@ -31,20 +31,38 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 
+				<!-- nav -->
+				<nav  class="nav" role="navigation">
+			<?php		wp_nav_menu( array(
+		'theme_location' => 'menu-1',
+		'menu-id' => 'primary-menu',
+		'menu_class' => 'menu',
+) );
+?>
+				</nav>
+				<!-- /nav -->
+
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<?php echo get_the_post_thumbnail(2); ?>
 						</a>
 					</div>
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
+					<nav id="site-navigation" class="nav main-navigation" role="navigation">
+				<?php		wp_nav_menu( array(
+			'theme_location' => 'menu-2',
+			'menu-id' => 'primary-menu-2',
+			'menu_class' => 'menu',
+	) );
+	?>
 					</nav>
 					<!-- /nav -->
+
+
 
 			</header>
 			<!-- /header -->

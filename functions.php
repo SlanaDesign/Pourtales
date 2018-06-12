@@ -53,6 +53,20 @@ if (function_exists('add_theme_support'))
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
+    register_nav_menus( array(
+      'menu-1' => esc_html__( 'Primary', 'pourtales' ),
+) );
+register_nav_menus( array(
+  'menu-2' => esc_html__( 'Primary-2', 'pourtales' ),
+) );
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+  if (in_array('current-menu-item', $classes) ){
+      $classes[] = 'active ';
+  }
+  return $classes;
+}
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
@@ -97,6 +111,12 @@ function html5blank_header_scripts()
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
+        wp_register_script('jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '2.7.1'); // Modernizr
+      wp_enqueue_script('jquery-ui'); // Enqueue it!
+
+      wp_register_script('slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '', true); // Modernizr
+    wp_enqueue_script('slick-js'); // Enqueue it!
+
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
@@ -117,6 +137,18 @@ function html5blank_styles()
 {
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
+
+    wp_register_style('jquery-ui', get_template_directory_uri() . '/scss/jquery-ui.css', array(), '1.0', 'all');
+    wp_enqueue_style('jquery-ui'); // Enqueue it!
+
+    wp_register_style('jquery-ui.theme', get_template_directory_uri() . '/scss/jquery-ui.theme.css', array(), '1.0', 'all');
+    wp_enqueue_style('jquery-ui.theme'); // Enqueue it!
+
+    wp_register_style('jquery-ui.structure', get_template_directory_uri() . '/scss/jquery-ui.structure.css', array(), '1.0', 'all');
+    wp_enqueue_style('jquery-ui.structure'); // Enqueue it!
+
+    wp_register_style('slick-css', get_template_directory_uri() . '/scss/slick.css', array(), '1.0', 'all');
+    wp_enqueue_style('slick-css'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
@@ -400,11 +432,11 @@ function create_post_type_html5()
 {
     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_post_type('actus', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
+            'name' => __('Actus', 'html5blank'), // Rename these to suit
+            'singular_name' => __('actus', 'html5blank'),
             'add_new' => __('Add New', 'html5blank'),
             'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
             'edit' => __('Edit', 'html5blank'),
