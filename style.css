@@ -182,14 +182,50 @@
 /* line 4, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
 #responsive-menu-button {
   display: block;
+  background: #c35c5f !important;
+}
+
+/* line 9, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#responsive-menu-container {
+  background: #c35c5f !important;
+  width: 100% !important;
+}
+
+/* line 14, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#responsive-menu-search-box {
+  display: none !important;
+}
+
+/* line 17, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#responsive-menu-additional-content {
+  display: none !important;
+}
+
+/* line 21, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#responsive-menu {
+  background: #c35c5f !important;
+  padding: 15px !important;
+}
+
+/* line 25, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+.responsive-menu-item-link {
+  background: #c35c5f !important;
+  border: none !important;
+  font-size: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+/* line 32, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+#menu-langue {
+  display: none;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 9, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 37, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   #responsive-menu-button {
     display: none;
   }
-  /* line 12, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 40, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header {
     display: block;
     width: 1024px;
@@ -203,36 +239,54 @@
     font-family: 'Crimson Text', serif;
     font-size: 20px;
   }
-  /* line 24, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 52, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header .logo {
     display: inline-block;
     padding-top: 30px;
     margin-right: 50px;
     box-sizing: border-box;
   }
-  /* line 34, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 62, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header nav.nav {
     vertical-align: top;
     display: inline-block;
   }
-  /* line 39, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 67, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header nav.nav li {
     display: inline-block;
     margin-right: 94px;
   }
-  /* line 42, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 70, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header nav.nav li #menu-item-22 {
     margin-right: 0px !important;
   }
-  /* line 45, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 73, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header nav.nav li a {
     text-decoration: none;
     color: #c35c5f;
   }
-  /* line 56, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  /* line 85, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
   .header .menu .active > a {
     border-bottom: 3px solid #c35c5f;
     padding-bottom: 10px;
+  }
+  /* line 95, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  #menu-langue {
+    display: inline-block;
+    margin-top: -50px !important;
+    text-align: right;
+    margin-right: 10%;
+  }
+  /* line 100, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  #menu-langue li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+  /* line 104, /Applications/MAMP/htdocs/Pourtales/wp-content/themes/Pourtales/scss/_header.scss */
+  #menu-langue li a {
+    text-decoration: none;
+    color: #c35c5f;
   }
 }
 

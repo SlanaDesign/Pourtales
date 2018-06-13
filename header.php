@@ -66,3 +66,11 @@
 
 			</header>
 			<!-- /header -->
+			<nav id="menu-langue" class="nav menu-langue" role="navigation">
+		<?php		wp_nav_menu( array(
+		'theme_location' => 'menu-3',
+		'menu-id' => 'menu-langue',
+		'menu_class' => 'menu-langue',
+		) );
+		?>
+			</nav>

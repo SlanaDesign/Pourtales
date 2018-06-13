@@ -59,6 +59,10 @@ if (function_exists('add_theme_support'))
 register_nav_menus( array(
   'menu-2' => esc_html__( 'Primary-2', 'pourtales' ),
 ) );
+register_nav_menus( array(
+  'menu-3' => esc_html__( 'Langues', 'pourtales' ),
+) );
+
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 function special_nav_class ($classes, $item) {
