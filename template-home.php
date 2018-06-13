@@ -2,6 +2,12 @@
 
 
 <main role="main">
+	<div class="home-mobile">
+		<?php  echo '<img src="'.get_field('image_mobile', $home->ID).'">';
+		echo '<h1>'.get_the_title($home->ID).'</h1>';
+ ?>
+
+	</div>
 
 	<div class="slider-home">
 		<?php
@@ -63,13 +69,14 @@
 															}
 															?><br><br><br>
 
-														<a class="ensavoirplus" href="events">et plus encore...</a>
+														<a class="ensavoirplus" href="events">et plus encore...</a><br><br><br>
 							 </section>
 
 
 							 <section class="actualites">
 
 								 <article class="actu_un">
+									 <h2><a href="">Actualités ‣</a></h2>
 									 <?php
 
 																	$actus = get_posts( array(

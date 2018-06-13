@@ -1,7 +1,29 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-			
+<article>
+	<ul>
+		<li>
+©2018 Château de Pourtalès </li>
+	</ul></article>
+
+<article>
+	<ul>
+<li><a href="">À TÉLÉCHARGER</a> </li>
+<li><a href="">LIENS </a></li>
+<li><a href="">TERMS & CONDITIONS</a></li>
+	</ul>
+</article>
+
+
+<article>
+	<ul>
+<li><a href="politique-de-confidentialite/">DONNÉES PERSONNELLES </a></li>
+<li><a href="">PLAN DU SITE</a> </li>
+<li><a href="">MENTIONS LÉGALES</a></li>
+</ul>
+</article>
+
 
 			</footer>
 			<!-- /footer -->

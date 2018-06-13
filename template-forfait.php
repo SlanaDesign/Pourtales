@@ -39,7 +39,7 @@ echo '<h4>'.get_field('titre_8', $forfait->ID).'</h4>';
 echo '<p>'.get_field('para_sept', $forfait->ID).'</p>';
 echo '</article>';
 ?>
-</section><br><br><br>
+</section><br><br><br><br><br>
 <section class="reservation">
 
   <div class="un">Date d'arrivée <img class="calendar_1" src="<?php echo get_field('calendrier', $forfait->ID) ?>"></div><div>Date de départ<img class="calendar_2" src="<?php echo get_field('calendrier', $forfait->ID) ?>"></div><div>Nb de personne  </div> <button>ok</button>
